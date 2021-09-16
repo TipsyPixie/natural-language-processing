@@ -1,0 +1,18 @@
+#### Temporary File
+log
+tmp
+*.log
+*.swp
+*.tmp
+.ipynb_checkpoints
+data
+
+### Output
+*.pyc
+__pycache__
+*.svg
+
+### Environment
+.venv
+.idea
+.vscode
