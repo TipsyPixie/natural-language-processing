@@ -1,8 +1,15 @@
 # Natural Language Processing
 
+- Week 1 - 4 (inclusive)
+  - Natural Language Processing with Classification and Vector Spaces
+- Week 5 - 8 (inclusive)
+  - Natural Language Processing with Probabilistic Models
+
 ## Getting Started
 
-### Using Binder
+### With Binder
+
+> This might take a few minutes. Local environment is highly recommended.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TipsyPixie/natural-language-processing/main?urlpath=lab)
 
