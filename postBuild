@@ -3,12 +3,12 @@
 # Binder post-build script
 
 # install Poetry
-pip install -q 'poetry>=1.1.7,<1.2.0'
+pip install 'poetry>=1.1.7,<1.2.0' --quiet
 # export requirements.txt with Poetry
 python -m poetry export -f 'requirements.txt' -o 'requirements.txt'
 # uninstall Poetry
-pip uninstall -yq 'poetry'
+pip uninstall 'poetry' --yes --quiet
 # install packages in requirements.txt
-pip install -r ./requirements.txt
+pip install --requirement ./requirements.txt --quiet
 # remove requirements.txt
 rm ./requirements.txt
