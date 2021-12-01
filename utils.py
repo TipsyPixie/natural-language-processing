@@ -2,13 +2,13 @@ import math
 import re
 from enum import Enum
 from string import punctuation
-from typing import List, Tuple, Dict, Callable
+from typing import Callable, Dict, List, Tuple
 
 import nltk
 import numpy
-from matplotlib import transforms, pyplot
+from matplotlib import pyplot, transforms
 from matplotlib.patches import Ellipse
-from nltk.stem import StemmerI, PorterStemmer
+from nltk.stem import PorterStemmer, StemmerI
 from nltk.tokenize import TweetTokenizer
 from pandas import DataFrame
 
@@ -181,7 +181,9 @@ def get_bayes_features(
     return DataFrame(data=features, columns=["positive", "negative"])
 
 
-def plot_vectors(vectors, colors=['k', 'b', 'r', 'm', 'c'], axes=None, fname='image.svg', ax=None):
+def plot_vectors(
+    vectors, colors=["k", "b", "r", "m", "c"], axes=None, fname="image.svg", ax=None
+):
     # scale = 1
     # scale_units = 'x'
     x_dir = []
@@ -206,7 +208,16 @@ def plot_vectors(vectors, colors=['k', 'b', 'r', 'm', 'c'], axes=None, fname='im
     ax2.axis([-x_axis, x_axis, -y_axis, y_axis])
 
     for i, vec in enumerate(vectors):
-        ax2.arrow(0, 0, vec[0][0], vec[0][1], head_width=0.05 * x_axis, head_length=0.05 * y_axis, fc=colors[i], ec=colors[i])
+        ax2.arrow(
+            0,
+            0,
+            vec[0][0],
+            vec[0][1],
+            head_width=0.05 * x_axis,
+            head_length=0.05 * y_axis,
+            fc=colors[i],
+            ec=colors[i],
+        )
 
     if ax is None:
         pyplot.show()
